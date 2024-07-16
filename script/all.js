@@ -81,8 +81,8 @@ window.addEventListener('DOMContentLoaded', function () {
     try {
         let headerBtnTrigger = document.querySelector('.hb-header__menu1-trigger'),
             headerBtnMenu = document.querySelector('.hb-header__menu1-content');
-        if(headerBtnTrigger && headerBtnMenu) {
-            headerBtnTrigger.addEventListener('click', function (){
+        if (headerBtnTrigger && headerBtnMenu) {
+            headerBtnTrigger.addEventListener('click', function () {
                 headerBtnMenu.classList.toggle('active');
             })
         }
@@ -91,10 +91,23 @@ window.addEventListener('DOMContentLoaded', function () {
         })
         document.body.addEventListener('click', function (e) {
             let current = e.target;
-            if(!current.classList.contains('hb-header__menu1-trigger')) {
+            if (!current.classList.contains('hb-header__menu1-trigger')) {
                 headerBtnMenu.classList.remove('active');
             }
         })
+    } catch (e) {
+        console.log(e);
+    }
+
+    //hb hero location dialog logic
+    try {
+        let heroLocationDialogTrigger = document.querySelector('.hb-hero__location'),
+            heroLocationDropDown = document.querySelector('.hb-hero__location-dropdown');
+        if(heroLocationDialogTrigger && heroLocationDropDown) {
+            heroLocationDialogTrigger.addEventListener('click', function (){
+                heroLocationDropDown.showModal();
+            })
+        }
     } catch (e) {
         console.log(e);
     }

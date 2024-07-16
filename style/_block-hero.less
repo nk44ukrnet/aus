@@ -1,3 +1,54 @@
 .hb-hero {
-  background-color: pink;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.84) 14.06%, rgba(0, 0, 0, 0.00) 100%), url(../img/hero-bg-light.png) lightgray 50% / cover no-repeat;
+
+  &__container {
+    padding-block: 84px 212px;
+  }
+
+  html.hb-theme-dark &__container {
+    padding-block: 160px 356px;
+  }
+
+  &__location-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 350px;
+    margin-inline: auto;
+  }
+
+  &__location {
+    width: 100%;
+    max-width: 226px;
+    font-size: 13px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__location-dropdown {
+  }
+
+  &__heading {
+  }
+
+  &__subtitle {
+  }
+
+  &__holder {
+  }
+
+  &__item {
+  }
+
+  &__title {
+  }
+
+  &__item-search {
+  }
+}
+
+.hb-container {
 }

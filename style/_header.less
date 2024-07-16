@@ -1,4 +1,5 @@
 .hb-header {
+  z-index: 2;
 
   &__container {
     padding-block: 20px 17px;
@@ -91,6 +92,7 @@
     &:not(.active) {
       opacity: 0;
       bottom: -45px;
+      pointer-events: none;
 
       @media (max-width: @headerBp) {
         bottom: -25px;
@@ -140,7 +142,7 @@
   }
 
   &__nav-menu-mobile {
-    @media (min-width: @mobile) {
+    @media (min-width: @headerBp) {
       display: none;
     }
   }
@@ -301,20 +303,17 @@
 
     a {
       text-decoration: none;
-      color: #000;
-      opacity: 0.88;
+      color: rgba(255, 255, 255, 0.88);
+      opacity: 0.7;
       font-size: 13px;
       line-height: 123%;
     }
   }
 }
 
-.hb-trigger-switch-to-dark-mode {
-}
-
-.hb-trigger-switch-to-light-mode {
-}
-
-
-.active {
+html.hb-theme-dark .hb-header-menu-items {
+  a {
+    color: rgba(255, 255, 255, 0.60);
+    opacity: 1;
+  }
 }

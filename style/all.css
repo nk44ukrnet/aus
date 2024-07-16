@@ -1127,6 +1127,9 @@ body {
   line-height: 125%;
   text-decoration: none;
 }
+.hb-header {
+  z-index: 2;
+}
 .hb-header__container {
   padding-block: 20px 17px;
   display: flex;
@@ -1209,6 +1212,7 @@ html.hb-theme-dark .hb-header__menu1-trigger svg path {
 .hb-header__menu1-content:not(.active) {
   opacity: 0;
   bottom: -45px;
+  pointer-events: none;
 }
 @media (max-width: 1081px) {
   .hb-header__menu1-content:not(.active) {
@@ -1243,7 +1247,7 @@ html.hb-theme-dark .hb-header__menu1-content {
 html.hb-theme-dark .hb-header__svg-wrap {
   background-color: #292929;
 }
-@media (min-width: 768px) {
+@media (min-width: 1081px) {
   .hb-header__nav-menu-mobile {
     display: none;
   }
@@ -1391,12 +1395,39 @@ html.hb-theme-dark .hb-header__button {
 }
 .hb-header .hb-header-menu-items a {
   text-decoration: none;
-  color: #000;
-  opacity: 0.88;
+  color: rgba(255, 255, 255, 0.88);
+  opacity: 0.7;
   font-size: 13px;
   line-height: 123%;
 }
+html.hb-theme-dark .hb-header-menu-items a {
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
 .hb-hero {
-  background-color: pink;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.84) 14.06%, rgba(0, 0, 0, 0) 100%), url(../img/hero-bg-light.png) lightgray 50% / cover no-repeat;
+}
+.hb-hero__container {
+  padding-block: 84px 212px;
+}
+html.hb-theme-dark .hb-hero__container {
+  padding-block: 160px 356px;
+}
+.hb-hero__location-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  margin-inline: auto;
+}
+.hb-hero__location {
+  width: 100%;
+  max-width: 226px;
+  font-size: 13px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 /*# sourceMappingURL=all.css.map */
