@@ -4,6 +4,7 @@
     padding-block: 20px 4px;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 
     ul {
       list-style-type: none;
@@ -15,6 +16,29 @@
   }
 
   &__menu1-trigger {
+    width: 48px;
+    height: 48px;
+    border: 1px solid transparent;
+    outline: unset;
+    background-color: var(--hb-color-light-1);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      pointer-events: none;
+    }
+  }
+
+  html.hb-theme-dark &__menu1-trigger {
+    border-color: #fff;
+    background-color: transparent;
+
+    svg path {
+      stroke: #fff;
+    }
   }
 
   &__menu1-content {
@@ -28,6 +52,12 @@
     margin: 0;
     box-sizing: border-box;
     border-radius: 20px;
+    transition: var(--hb-transition-linear);
+
+    &:not(.active) {
+      opacity: 0;
+      bottom: -5px;
+    }
 
     li {
       &:not(:last-child) {
@@ -41,6 +71,8 @@
       align-items: center;
       font-size: 14px;
       line-height: 114%;
+      text-decoration: none;
+      color: var(--hb-color-dark);
     }
   }
 
@@ -50,7 +82,6 @@
     box-shadow: 0px 0px 71px 0px rgba(0, 0, 0, 0.20);
     --hb-color-dark: #fff;
     --hb-color-dark1: #fff;
-
   }
 
   &__svg-wrap {
@@ -77,6 +108,9 @@
   }
 
   &__nav-menu-mobile {
+    @media (min-width: @mobile) {
+      display: none;
+    }
   }
 
   &__menu2 {
@@ -100,6 +134,36 @@
 
   &__button {
   }
+
+  .hb-header-menu-items {
+    @media (min-width: @mobile) {
+    margin-inline: 52px 81px;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 52px;
+    }
+
+    li {
+      &.active a {
+        color: var(--hb-color-light-1);
+        font-size: 16px;
+        opacity: 1;
+        font-weight: 600;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+      opacity: 0.88;
+      font-size: 13px;
+      line-height: 123%;
+    }
+  }
 }
 
 .hb-trigger-switch-to-dark-mode {
@@ -108,8 +172,6 @@
 .hb-trigger-switch-to-light-mode {
 }
 
-.hb-header-menu-items {
-}
 
 .active {
 }

@@ -1044,6 +1044,7 @@ button.swiper-pagination-bullet {
   --hb-color-dark-1: #292D32;
   --hb-color-1: #D9472F;
   --hb-font1: 'Euclid Circular A', sans-serif;
+  --hb-transition-linear: all 0.25s linear;
 }
 html.hb-theme-dark :root {
   --hb-color-light: #000;
@@ -1111,12 +1112,35 @@ body {
   padding-block: 20px 4px;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 .hb-header .hb-container ul {
   list-style-type: none;
 }
 .hb-header__menu1 {
   position: relative;
+}
+.hb-header__menu1-trigger {
+  width: 48px;
+  height: 48px;
+  border: 1px solid transparent;
+  outline: unset;
+  background-color: var(--hb-color-light-1);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hb-header__menu1-trigger svg {
+  pointer-events: none;
+}
+html.hb-theme-dark .hb-header__menu1-trigger {
+  border-color: #fff;
+  background-color: transparent;
+}
+html.hb-theme-dark .hb-header__menu1-trigger svg path {
+  stroke: #fff;
 }
 .hb-header__menu1-content {
   position: absolute;
@@ -1129,6 +1153,11 @@ body {
   margin: 0;
   box-sizing: border-box;
   border-radius: 20px;
+  transition: var(--hb-transition-linear);
+}
+.hb-header__menu1-content:not(.active) {
+  opacity: 0;
+  bottom: -5px;
 }
 .hb-header__menu1-content li:not(:last-child) {
   margin-bottom: 16px;
@@ -1139,6 +1168,8 @@ body {
   align-items: center;
   font-size: 14px;
   line-height: 114%;
+  text-decoration: none;
+  color: var(--hb-color-dark);
 }
 html.hb-theme-dark .hb-header__menu1-content {
   background-color: #1C1C1C;
@@ -1159,8 +1190,38 @@ html.hb-theme-dark .hb-header__menu1-content {
 html.hb-theme-dark .hb-header__svg-wrap {
   background-color: #292929;
 }
+@media (min-width: 768px) {
+  .hb-header__nav-menu-mobile {
+    display: none;
+  }
+}
 .hb-header__side {
   margin-left: auto;
+}
+@media (min-width: 768px) {
+  .hb-header .hb-header-menu-items {
+    margin-inline: 52px 81px;
+  }
+}
+.hb-header .hb-header-menu-items ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 52px;
+}
+.hb-header .hb-header-menu-items li.active a {
+  color: var(--hb-color-light-1);
+  font-size: 16px;
+  opacity: 1;
+  font-weight: 600;
+}
+.hb-header .hb-header-menu-items a {
+  text-decoration: none;
+  color: #000;
+  opacity: 0.88;
+  font-size: 13px;
+  line-height: 123%;
 }
 .hb-hero {
   background-color: pink;
