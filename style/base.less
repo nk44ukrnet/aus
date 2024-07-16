@@ -6,6 +6,14 @@ html:not(.hb-theme-dark) .hb-trigger-switch-to-light-mode {
   display: none;
 }
 
+html:not(.hb-theme-dark) .hb-dark-mode-only {
+  display: none;
+}
+
+html.hb-theme-dark .hb-light-mode-only {
+  display: none;
+}
+
 body {
   font-family: var(--hb-font1);
 }
@@ -25,9 +33,17 @@ body {
 }
 
 .hb-button-filled {
+  background-color: var(--hb-color-1);
+  color: #fff;
+  font-size: 16px;
+  line-height: 125%;
+  text-decoration: none;
 
 }
 
 .hb-button-blank {
-
+  color: #fff;
+  font-size: 16px;
+  line-height: 125%;
+  text-decoration: none;
 }
