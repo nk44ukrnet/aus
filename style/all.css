@@ -1095,11 +1095,42 @@ html:not(.hb-theme-dark) .hb-trigger-switch-to-light-mode {
 body {
   font-family: var(--hb-font1);
 }
+.hb-max-container {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+}
 .hb-container {
   width: 100%;
   max-width: 1304px;
   padding-inline: 20px;
   box-sizing: border-box;
   margin-inline: auto;
+}
+.hb-header .hb-container {
+  padding-block: 20px 4px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.hb-header__menu1 {
+  position: relative;
+}
+.hb-header__menu1-content {
+  position: absolute;
+  background-color: var(--hb-color-light);
+}
+html.hb-theme-dark .hb-header__menu1-content {
+  background-color: #1C1C1C;
+  color: #fff;
+}
+html.hb-theme-dark .hb-header__menu1-content svg {
+  --hb-color-dark: #fff;
+  --hb-color-dark1: #fff;
+}
+.hb-header__side {
+  margin-left: auto;
+}
+.hb-hero {
+  background-color: pink;
 }
 /*# sourceMappingURL=all.css.map */

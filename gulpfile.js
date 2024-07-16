@@ -9,7 +9,7 @@ gulp.task('minify-css', function() {
     return gulp.src('style/all.css')
         .pipe(cleanCSS())
         .pipe(concat('all.min.css'))
-        .pipe(gulp.dest('css')); // Change destination directory to 'dist/css'
+        .pipe(gulp.dest('style')); // Change destination directory to 'dist/css'
 });
 
 // Minify JavaScript
