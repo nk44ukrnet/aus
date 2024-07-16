@@ -99,13 +99,14 @@ window.addEventListener('DOMContentLoaded', function () {
         console.log(e);
     }
 
-    //hb hero location dialog logic
+    //hb hero location logic
     try {
         let heroLocationDialogTrigger = document.querySelector('.hb-hero__location'),
             heroLocationDropDown = document.querySelector('.hb-hero__location-dropdown');
-        if(heroLocationDialogTrigger && heroLocationDropDown) {
-            heroLocationDialogTrigger.addEventListener('click', function (){
-                heroLocationDropDown.showModal();
+        if (heroLocationDialogTrigger && heroLocationDropDown) {
+            heroLocationDialogTrigger.addEventListener('click', function () {
+                heroLocationDialogTrigger.classList.toggle('active');
+                heroLocationDropDown.classList.toggle('active');
             })
         }
     } catch (e) {
