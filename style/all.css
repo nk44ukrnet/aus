@@ -2455,6 +2455,11 @@ html.hb-theme-dark .hb-about__heading {
   background-repeat: no-repeat;
   background-position: bottom 284px center;
 }
+@media (max-width: 768px) {
+  .hb-about-dark {
+    background-position: bottom 0 center;
+  }
+}
 .hb-about-dark p {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
@@ -2473,7 +2478,12 @@ html.hb-theme-dark .hb-about__heading {
   width: 100%;
   max-width: 708px;
   margin-inline: auto;
-  margin-bottom: 5px;
+  margin-bottom: 70px;
+}
+@media (max-width: 768px) {
+  .hb-about-dark h3 + p {
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 1300px) {
   .hb-about-dark h3 {
@@ -2483,14 +2493,88 @@ html.hb-theme-dark .hb-about__heading {
 .hb-about-dark__holder {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 15px;
 }
-.hb-about-dark__cell_text-1 {
-  flex: 0 1 370px;
+@media (max-width: 768px) {
+  .hb-about-dark__holder {
+    display: block;
+  }
 }
-.hb-about-dark__cell_img-1 {
-  flex: 0 1 450px;
+@media (min-width: 768px) {
+  .hb-about-dark__cell_text-1 {
+    flex: 0 1 370px;
+  }
+  .hb-about-dark__cell_img-1 {
+    flex: 0 1 450px;
+  }
+  .hb-about-dark__cell_text-2 {
+    flex: 0 1 370px;
+  }
 }
-.hb-about-dark__cell_text-2 {
-  flex: 0 1 370px;
+@media (max-width: 768px) {
+  .hb-about-dark__cell_img-1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .hb-about-dark__text-1 {
+    margin-bottom: 290px;
+    margin-top: 20px;
+  }
+  .hb-about-dark__text-2 {
+    margin-bottom: 79px;
+  }
+  .hb-about-dark__text-3 {
+    margin-bottom: 385px;
+  }
+  .hb-about-dark__text-4 {
+    margin-bottom: -30px;
+  }
+}
+.hb-about-dark__member-area h4 {
+  margin-bottom: 16px;
+  color: #FFF;
+  font-size: 20px;
+  line-height: 120%;
+  font-weight: 500;
+}
+.hb-about-dark__members {
+  display: flex;
+  padding-bottom: 70px;
+}
+@media (max-width: 768px) {
+  .hb-about-dark__members {
+    padding-bottom: 30px;
+  }
+}
+.hb-about-dark__member {
+  width: 44px;
+  height: 44px;
+  background-color: #FFF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hb-about-dark__member:not(:first-child) {
+  margin-left: -22px;
+}
+.hb-about-dark__member img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.hb-about-dark__member span {
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 133%;
+}
+.hb-about-dark .hb-container {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 /*# sourceMappingURL=all.css.map */
