@@ -112,4 +112,24 @@ window.addEventListener('DOMContentLoaded', function () {
     } catch (e) {
         console.log(e);
     }
+
+    //swiper categories
+    try {
+        let swCats = document.querySelector('.swiperCategories');
+        if(swCats) {
+            let swiper = new Swiper(".swiperCategories", {
+                pagination: {
+                    el: ".swiper-pagination-custom",
+                    type: "fraction",
+                },
+                navigation: {
+                    nextEl: ".swiper-next",
+                    prevEl: ".swiper-prev",
+                },
+                initialSlide: 1,
+            });
+        }
+    } catch (e) {
+        console.log(e);
+    }
 })

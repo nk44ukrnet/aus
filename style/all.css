@@ -1045,6 +1045,7 @@ button.swiper-pagination-bullet {
   --hb-color-1: #D9472F;
   --hb-font1: 'Euclid Circular A', sans-serif;
   --hb-font2: Inter, sans-serif;
+  --hb-font3: Poppins, sans-serif;
   --hb-transition-linear: all 0.25s linear;
 }
 html.hb-theme-dark {
@@ -1055,45 +1056,59 @@ html.hb-theme-dark {
 }
 @font-face {
   font-display: swap;
-  font-family: 'Euclid Circular A', sans-serif;
+  font-family: 'Euclid Circular A';
   font-style: normal;
   font-weight: 300;
   src: url('../fonts/Euclid-Circular-A-Light.woff') format('woff');
 }
 @font-face {
   font-display: swap;
-  font-family: 'Euclid Circular A', sans-serif;
+  font-family: 'Euclid Circular A';
   font-style: normal;
   font-weight: 400;
   src: url('../fonts/Euclid-Circular-A-Regular.woff') format('woff');
 }
 @font-face {
   font-display: swap;
-  font-family: 'Euclid Circular A', sans-serif;
+  font-family: 'Euclid Circular A';
   font-style: normal;
   font-weight: 500;
   src: url('../fonts/Euclid-Circular-A-Medium.woff') format('woff');
 }
 @font-face {
   font-display: swap;
-  font-family: 'Euclid Circular A', sans-serif;
+  font-family: 'Euclid Circular A';
   font-style: normal;
   font-weight: 600;
   src: url('../fonts/Euclid-Circular-A-SemiBold.woff') format('woff');
 }
 @font-face {
   font-display: swap;
-  font-family: 'Euclid Circular A', sans-serif;
+  font-family: 'Euclid Circular A';
   font-style: normal;
   font-weight: 700;
   src: url('../fonts/Euclid-Circular-A-Bold.woff') format('woff');
 }
 @font-face {
   font-display: swap;
-  font-family: 'Intern', sans-serif;
+  font-family: 'Intern';
   font-style: normal;
   font-weight: 400;
   src: url('../fonts/Inter-Regular.woff') format('woff');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Poppins-Regular.woff') format('woff');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Poppins-Medium.woff') format('woff');
 }
 html.hb-theme-dark .hb-trigger-switch-to-dark-mode {
   display: none;
@@ -1936,5 +1951,200 @@ html.hb-theme-dark .hb-locations__cancel {
   line-height: 125%;
   text-decoration: none;
   color: #fff;
+}
+.hb-popular {
+  background-color: var(--hb-color-light);
+}
+.hb-popular__container {
+  padding-bottom: 100px;
+}
+@media (max-width: 768px) {
+  .hb-popular__container {
+    padding-bottom: 50px;
+  }
+}
+.hb-popular__heading {
+  margin-top: 0;
+  margin-bottom: 41px;
+}
+@media (max-width: 768px) {
+  .hb-popular__heading {
+    margin-bottom: 20px;
+  }
+}
+.hb-popular__holder {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+}
+@media (max-width: 768px) {
+  .hb-popular__holder {
+    gap: 20px;
+    justify-content: center;
+  }
+}
+.hb-popular__item {
+  flex: 0 1 264px;
+  min-height: 400px;
+  position: relative;
+  background-color: #000;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.hb-popular__product-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hb-popular__content {
+  z-index: 2;
+  margin-top: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.hb-popular__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  min-width: 129px;
+  gap: 10px;
+  margin-inline: auto;
+}
+.hb-popular__users {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.hb-popular__user {
+  border-radius: 50%;
+  border: 1px solid #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -17px;
+}
+.hb-popular__user:first-child {
+  margin-left: 0;
+}
+.hb-popular__user-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.hb-popular__rating {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.hb-popular__title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 22px;
+  font-family: var(--hb-font3);
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+.hb-popular__description {
+  color: #ABABAB;
+  font-family: var(--hb-font3);
+  line-height: 138%;
+  font-size: 13px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  width: 100%;
+  max-width: 202px;
+  margin-inline: auto;
+  text-align: center;
+}
+.hb-popular__price {
+  text-align: center;
+  font-family: var(--hb-font3);
+  font-size: 20px;
+  line-height: 126%;
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+.hb-popular__button {
+  margin-inline: auto;
+  height: 48px;
+  min-width: 131px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  width: fit-content;
+  border-radius: 24px;
+  background-color: var(--hb-color-1);
+}
+.hb-categories {
+  padding-bottom: 100px;
+}
+@media (max-width: 768px) {
+  .hb-categories {
+    padding-bottom: 50px;
+  }
+}
+.hb-categories__heading {
+  margin-top: 0;
+  margin-bottom: 44px;
+}
+@media (max-width: 768px) {
+  .hb-categories__heading {
+    margin-bottom: 20px;
+  }
+}
+.hb-categories__list {
+  padding-left: 100px;
+}
+@media (max-width: 1428px) {
+  .hb-categories__list {
+    padding-left: 20px;
+  }
+}
+.hb-categories__list form {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 28px;
+  overflow: auto;
+}
+.hb-categories__list label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--hb-color-light-1);
+  border-radius: 32px;
+  box-sizing: border-box;
+  padding: 4px 30px 4px 4px;
+  width: fit-content;
+  cursor: pointer;
+  color: var(--hb-color-dark);
+}
+.hb-categories__list label:has(input:checked) {
+  background-color: var(--hb-color-1);
+  color: #fff;
+}
+.hb-categories__list input[type="radio"] {
+  display: none;
+}
+html.hb-theme-dark .hb-categories__list label {
+  background-color: #292929;
+}
+.hb-categories__sm-image {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 /*# sourceMappingURL=all.css.map */
