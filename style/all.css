@@ -1047,7 +1047,7 @@ button.swiper-pagination-bullet {
   --hb-font2: Inter, sans-serif;
   --hb-transition-linear: all 0.25s linear;
 }
-html.hb-theme-dark :root {
+html.hb-theme-dark {
   --hb-color-light: #000;
   --hb-color-light-1: #000;
   --hb-color-dark: #fff;
@@ -1144,6 +1144,11 @@ body {
   flex-direction: column;
   width: fit-content;
   gap: 4px;
+}
+@media (max-width: 768px) {
+  .hb-heading-underline {
+    font-size: 40px;
+  }
 }
 .hb-heading-underline::after {
   content: '';
@@ -1406,7 +1411,7 @@ html.hb-theme-dark .hb-header__button {
   gap: 52px;
 }
 .hb-header .hb-header-menu-items li.active a {
-  color: var(--hb-color-light-1);
+  color: #F5F7FB;
   font-size: 16px;
   opacity: 1;
   font-weight: 600;
@@ -1428,6 +1433,9 @@ html.hb-theme-dark .hb-header__button {
   opacity: 0.7;
   font-size: 13px;
   line-height: 123%;
+}
+html.hb-theme-dark .hb-header-menu-items li.active a {
+  color: #fff;
 }
 html.hb-theme-dark .hb-header-menu-items a {
   color: rgba(255, 255, 255, 0.6);
@@ -1762,9 +1770,19 @@ html.hb-theme-dark .hb-hero__item-search {
 .hb-locations__container {
   padding-block: 72px 100px;
 }
+@media (max-width: 768px) {
+  .hb-locations__container {
+    padding-block: 25px 50px;
+  }
+}
 .hb-locations__heading {
   margin-top: 0;
   margin-bottom: 32px;
+}
+@media (max-width: 768px) {
+  .hb-locations__heading {
+    margin-bottom: 25px;
+  }
 }
 .hb-locations__subheading {
   color: var(--hb-color-dark);
@@ -1774,18 +1792,38 @@ html.hb-theme-dark .hb-hero__item-search {
   margin-top: 0;
   margin-bottom: 40px;
 }
+@media (max-width: 768px) {
+  .hb-locations__subheading {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
 .hb-locations__holder {
   counter-reset: locations;
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1170px;
+}
+.hb-locations__side {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1 1 572px;
+}
+@media (max-width: 768px) {
+  .hb-locations__side {
+    gap: 10px;
+  }
 }
 .hb-locations__item {
   counter-increment: locations;
   display: flex;
   align-items: center;
   gap: 8px;
-  flex: 0 1 572px;
+  width: 100%;
 }
 .hb-locations__item input[type="radio"] {
   display: none;
@@ -1808,6 +1846,10 @@ html.hb-theme-dark .hb-hero__item-search {
   border-radius: 50%;
   border: 1px solid var(--hb-color-1);
 }
+html.hb-theme-dark .hb-locations__count::before {
+  color: #fff;
+  border-color: #fff;
+}
 .hb-locations__label {
   cursor: pointer;
   background-color: var(--hb-color-light-1);
@@ -1817,17 +1859,82 @@ html.hb-theme-dark .hb-hero__item-search {
   flex: 1 1 540px;
   align-items: center;
   border-radius: 16px;
+  color: var(--hb-color-dark);
+}
+@media (max-width: 768px) {
+  .hb-locations__label {
+    padding: 15px;
+  }
 }
 html.hb-theme-dark .hb-locations__label {
   background-color: #292929;
 }
 .hb-locations__group {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 12px;
 }
+@media (max-width: 768px) {
+  .hb-locations__text {
+    margin-right: 5px;
+    font-size: 14px;
+  }
+}
 .hb-locations__checkmark {
   margin-left: auto;
+}
+.hb-locations__controls {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 1170px;
+}
+@media (max-width: 768px) {
+  .hb-locations__controls {
+    margin-top: 10px;
+    gap: 10px;
+  }
+}
+.hb-locations__controls button {
+  outline: none;
+  border: 1px solid var(--hb-color-1);
+  min-width: 220px;
+  min-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  cursor: pointer;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 100%;
+}
+@media (max-width: 768px) {
+  .hb-locations__controls button {
+    font-size: 14px;
+    min-height: 30px;
+    min-width: 130px;
+  }
+}
+.hb-locations__cancel {
+  border-color: var(--hb-color-1);
+  background: transparent;
+  color: var(--hb-color-1);
+}
+html.hb-theme-dark .hb-locations__cancel {
+  border-color: #fff;
+  color: #fff;
+}
+.hb-locations__submit {
+  background-color: var(--hb-color-1);
+  font-size: 16px;
+  line-height: 125%;
+  text-decoration: none;
+  color: #fff;
 }
 /*# sourceMappingURL=all.css.map */
