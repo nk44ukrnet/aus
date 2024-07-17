@@ -122,8 +122,10 @@
   label {
     display: flex;
     flex-direction: column;
+
     span {
       font-size: 14px;
+      color: rgba(#000, .5);
     }
   }
 
@@ -136,6 +138,11 @@
     max-width: 108px;
     transition: var(--hb-transition-linear);
 
+    &::internal-autofill-selected {
+      background: transparent;
+    }
+
+    &.hb-contacts__input-highlight,
     &:focus {
       border-color: #000;
       max-width: 380px;

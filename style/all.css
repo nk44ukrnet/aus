@@ -2660,6 +2660,7 @@ html.hb-theme-dark .hb-about__heading {
 }
 .hb-contacts-form label span {
   font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
 }
 .hb-contacts-form input {
   border: none;
@@ -2670,6 +2671,10 @@ html.hb-theme-dark .hb-about__heading {
   max-width: 108px;
   transition: var(--hb-transition-linear);
 }
+.hb-contacts-form input::internal-autofill-selected {
+  background: transparent;
+}
+.hb-contacts-form input.hb-contacts__input-highlight,
 .hb-contacts-form input:focus {
   border-color: #000;
   max-width: 380px;
