@@ -115,8 +115,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
     //swiper categories
     try {
-        let swCats = document.querySelector('.swiperCategories');
-        if(swCats) {
+        let swCats = document.querySelectorAll('.swiperCategories');
+        if(swCats.length) {
             let swiper = new Swiper(".swiperCategories", {
                 pagination: {
                     el: ".swiper-pagination-custom",
@@ -126,7 +126,7 @@ window.addEventListener('DOMContentLoaded', function () {
                     nextEl: ".swiper-next",
                     prevEl: ".swiper-prev",
                 },
-                initialSlide: 1,
+                // initialSlide: 1,
             });
         }
     } catch (e) {
