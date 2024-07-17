@@ -1,0 +1,7 @@
+.hb-contacts__inner {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1056px;
+}
+/*# sourceMappingURL=_block-contacts.css.map */

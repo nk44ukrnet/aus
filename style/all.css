@@ -2577,4 +2577,19 @@ html.hb-theme-dark .hb-about__heading {
 .hb-about-dark .hb-container {
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
+.hb-contacts__inner {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1056px;
+}
+.hb-contacts__heading {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .hb-contacts__heading {
+    margin-bottom: 20px;
+  }
+}
 /*# sourceMappingURL=all.css.map */

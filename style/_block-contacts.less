@@ -1,18 +1,41 @@
 .hb-contacts {
 
   &__container {
+
   }
 
   &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1056px;
   }
 
   &__group {
+
   }
 
   &__cell {
+    &:nth-child(1) {
+
+    }
+
+    &:nth-child(1) {
+
+    }
+  }
+
+  html.hb-theme-dark &__cell {
+
   }
 
   &__heading {
+    margin-top: 0;
+    margin-bottom: 40px;
+
+    @media (max-width: @mobile) {
+      margin-bottom: 20px;
+    }
   }
 
   &__description {
@@ -30,15 +53,21 @@
   &__input-highlight {
   }
 }
+
 .hb-container {
 }
+
 .hb-dark-mode-only {
 }
+
 .hb-heading-underline {
 }
+
 .hb-light-mode-only {
 }
+
 .hb-contacts-form {
 }
+
 .hb-button-filled {
 }
