@@ -37,12 +37,6 @@ html.hb-theme-dark .hb-about {
   }
 }
 
-.hb-container {
-}
-
-.hb-heading-underline {
-}
-
 .hb-about-light {
 
   .hb-max-container {
@@ -177,11 +171,94 @@ html.hb-theme-dark .hb-about {
   }
 }
 
-.hb-light-mode-only {
-}
 
 .hb-about-dark {
+  background-image: url(../img/about-dark-bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom 284px center;
+
+  p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+    line-height: 142%;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 64px;
+    margin-top: 0;
+    font-weight: 600;
+    line-height: 138%;
+    text-transform: capitalize;
+
+    margin-bottom: 16px;
+
+    & + p {
+      width: 100%;
+      max-width: 708px;
+      margin-inline: auto;
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: @aboutBp) {
+      font-size: 40px;
+    }
+  }
+
+  &__holder {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__cell {
+
+    &_text-1 {
+      flex: 0 1 370px;
+    }
+
+    &_img-1 {
+      flex: 0 1 450px;
+    }
+
+    &_text-2 {
+      flex: 0 1 370px;
+    }
+  }
+
+  &__text-1 {
+  }
+
+  &__text-2 {
+  }
+
+  &__text-3 {
+  }
+
+  &__text-4 {
+  }
+
+  &__member-area {
+    h4 {
+    }
+  }
+
+  &__members {
+
+  }
+
+  &__member {
+    img {
+
+    }
+
+    span {
+
+    }
+  }
 }
 
 .hb-dark-mode-only {
+}
+
+.hb-container {
 }
