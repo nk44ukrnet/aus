@@ -1,0 +1,19 @@
+.hb-locations {
+  background-color: var(--hb-color-light);
+}
+.hb-locations__container {
+  padding-block: 72px 100px;
+}
+.hb-locations__heading {
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+.hb-locations__subheading {
+  color: var(--hb-color-dark);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 150%;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+/*# sourceMappingURL=_block-locations.css.map */

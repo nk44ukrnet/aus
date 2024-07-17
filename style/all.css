@@ -1135,6 +1135,26 @@ body {
   line-height: 125%;
   text-decoration: none;
 }
+.hb-heading-underline {
+  color: var(--hb-color-dark);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 166%;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 4px;
+}
+.hb-heading-underline::after {
+  content: '';
+  width: 50%;
+  height: 3px;
+  background-color: var(--hb-color-1);
+  position: static;
+  display: block;
+  border-radius: 12px;
+  opacity: 0.9;
+}
 .hb-header {
   position: relative;
   z-index: 3;
@@ -1735,5 +1755,79 @@ html:not(.hb-theme-dark) .hb-hero__item-search {
 }
 html.hb-theme-dark .hb-hero__item-search {
   display: none;
+}
+.hb-locations {
+  background-color: var(--hb-color-light);
+}
+.hb-locations__container {
+  padding-block: 72px 100px;
+}
+.hb-locations__heading {
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+.hb-locations__subheading {
+  color: var(--hb-color-dark);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 150%;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+.hb-locations__holder {
+  counter-reset: locations;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.hb-locations__item {
+  counter-increment: locations;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 1 572px;
+}
+.hb-locations__item input[type="radio"] {
+  display: none;
+}
+.hb-locations__item input[type="radio"]:checked ~ svg.hb-locations__checkmark path:nth-child(1) {
+  fill: var(--hb-color-1);
+  stroke: var(--hb-color-1);
+}
+.hb-locations__item input[type="radio"]:checked ~ svg.hb-locations__checkmark path:nth-child(2) {
+  stroke: #fff;
+}
+.hb-locations__count:before {
+  content: counter(locations);
+  color: var(--hb-color-1);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--hb-color-1);
+}
+.hb-locations__label {
+  cursor: pointer;
+  background-color: var(--hb-color-light-1);
+  padding: 18px 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 540px;
+  align-items: center;
+  border-radius: 16px;
+}
+html.hb-theme-dark .hb-locations__label {
+  background-color: #292929;
+}
+.hb-locations__group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.hb-locations__checkmark {
+  margin-left: auto;
 }
 /*# sourceMappingURL=all.css.map */
