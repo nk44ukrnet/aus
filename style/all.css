@@ -3095,7 +3095,7 @@ html.hb-theme-dark .hb-cta-download__text {
     border-radius: 0 25px 25px 0;
   }
 }
-@media (max-width: 806px) {
+@media (max-width: 1120px) {
   .hb-auth-page__side_content {
     flex-grow: 1;
   }
