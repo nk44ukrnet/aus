@@ -1187,6 +1187,9 @@ body {
 .hb-color-1 {
   color: var(--hb-color-1);
 }
+.hb-text-center {
+  text-align: center;
+}
 .hb-header {
   position: relative;
   z-index: 3;
@@ -3072,6 +3075,9 @@ html.hb-theme-dark .hb-cta-download__text {
   min-height: 100vh;
   width: 100%;
 }
+.hb-auth-page_verification {
+  background-image: url(../img/auth-side-verification.png);
+}
 @media (max-width: 1280px) {
   .hb-auth-page {
     background-position: center right -150px;
@@ -3364,5 +3370,43 @@ html.hb-theme-dark .hb-cta-download__text {
   width: 100%;
   max-width: 360px;
   height: auto;
+}
+.hb-form-auth-verification {
+  margin-block: 32px;
+}
+.hb-form-auth-verification input {
+  padding: 24px 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #FFF;
+  width: 51px;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 32px;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .hb-form-auth-verification input {
+    padding: 6px;
+    width: 30px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+.hb-form-auth-verification input::placeholder {
+  font-size: 0;
+}
+.hb-form-auth-verification input:valid + input::placeholder {
+  font-size: unset;
+}
+.hb-form-auth-verification__holder {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+@media (max-width: 768px) {
+  .hb-form-auth-verification__holder {
+    justify-content: center;
+  }
 }
 /*# sourceMappingURL=all.css.map */
