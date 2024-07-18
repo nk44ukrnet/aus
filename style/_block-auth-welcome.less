@@ -1,0 +1,86 @@
+.hb-app-auth-welcome {
+  background-color: #000;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../img/auth-welcome-bg.png);
+  background-position: center left;
+  background-repeat: no-repeat;
+  margin-inline: auto;
+  position: relative;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+
+  &__abs-gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 883px;
+    height: 100%;
+    background: linear-gradient(270deg, #000 63.08%, rgba(0, 0, 0, 0.00) 107.43%);
+  }
+
+  &__inner {
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+
+    padding-inline: 20px;
+    padding-block: 50px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 340px;
+    text-align: center;
+    @media (min-width: @mobile) {
+      margin-right: 101px;
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 323px;
+    height: auto;
+  }
+
+  &__heading {
+    margin-top: 54px;
+    margin-bottom: 16px;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 261px;
+    margin-inline: auto;
+    margin-top: 0;
+    margin-bottom: 40px;
+    line-height: 150%;
+    font-size: 16px;
+  }
+  .hb-button-filled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 48px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    font-weight: 600;
+  }
+}
+
+

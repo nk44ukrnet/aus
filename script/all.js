@@ -85,16 +85,18 @@ window.addEventListener('DOMContentLoaded', function () {
             headerBtnTrigger.addEventListener('click', function () {
                 headerBtnMenu.classList.toggle('active');
             })
+
+            headerBtnMenu.addEventListener('click', function (e) {
+                e.stopPropagation();
+            })
+
+            document.body.addEventListener('click', function (e) {
+                let current = e.target;
+                if (!current.classList.contains('hb-header__menu1-trigger')) {
+                    headerBtnMenu.classList.remove('active');
+                }
+            })
         }
-        headerBtnMenu.addEventListener('click', function (e) {
-            e.stopPropagation();
-        })
-        document.body.addEventListener('click', function (e) {
-            let current = e.target;
-            if (!current.classList.contains('hb-header__menu1-trigger')) {
-                headerBtnMenu.classList.remove('active');
-            }
-        })
     } catch (e) {
         console.log(e);
     }
