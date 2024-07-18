@@ -1043,6 +1043,7 @@ button.swiper-pagination-bullet {
   --hb-color-dark: #000;
   --hb-color-dark-1: #292D32;
   --hb-color-1: #D9472F;
+  --hb-color-2: #AC3420;
   --hb-font1: 'Euclid Circular A', sans-serif;
   --hb-font2: Inter, sans-serif;
   --hb-font3: Poppins, sans-serif;
@@ -1457,6 +1458,92 @@ html.hb-theme-dark .hb-header-menu-items li.active a {
 html.hb-theme-dark .hb-header-menu-items a {
   color: rgba(255, 255, 255, 0.6);
   opacity: 1;
+}
+.hb-footer {
+  background-color: #F9FBFC;
+  margin-top: 123px;
+}
+.hb-footer__content {
+  padding-block: 44px;
+}
+@media (min-width: 768px) {
+  .hb-footer__inner {
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+  }
+}
+.hb-footer__holder {
+  width: 100%;
+  max-width: 596px;
+  margin-inline: auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .hb-footer__holder {
+    padding-inline: 20px;
+  }
+}
+.hb-footer__nav {
+  margin-top: 52px;
+  margin-bottom: 36px;
+}
+@media (max-width: 768px) {
+  .hb-footer__nav {
+    margin-block: 30px;
+  }
+}
+.hb-footer__nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .hb-footer__nav ul {
+    row-gap: 5px;
+  }
+}
+.hb-footer__nav li:not(:last-child)::after {
+  content: '/';
+  display: inline-block;
+  margin-inline: 8px;
+  color: #C6C6C6;
+}
+.hb-footer__nav a {
+  font-size: 14px;
+  line-height: 142%;
+  text-decoration: none;
+  color: var(--hb-color-dark);
+}
+.hb-footer__social {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  margin-bottom: 36px;
+}
+@media (max-width: 768px) {
+  .hb-footer__social {
+    gap: 10px;
+  }
+}
+.hb-footer__social img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  object-position: center center;
+}
+.hb-footer__info {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  line-height: 157%;
+  margin: 0;
 }
 html.hb-theme-dark .hb-hero {
   background: linear-gradient(180deg, #000 1.2%, rgba(0, 0, 0, 0.2) 98.91%), url(../img/hero-bg-dark.png) lightgray 50% / cover no-repeat;
@@ -2578,7 +2665,7 @@ html.hb-theme-dark .hb-about__heading {
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 .hb-contacts__container {
-  padding-bottom: 92px;
+  padding-bottom: 192px;
 }
 @media (max-width: 768px) {
   .hb-contacts__container {
@@ -2784,17 +2871,83 @@ html.hb-theme-dark .hb-contacts-form .hb-button-filled {
   border-radius: 24px;
 }
 .hb-cta-download__holder {
-  background-color: var(--hb-color-1);
+  background-color: var(--hb-color-2);
+  background-image: url(../img/cta-download-bg-dark-mode1.svg);
+  background-repeat: repeat-x;
+  background-position: center center;
   position: relative;
   min-height: 324px;
   display: flex;
+  align-items: center;
+}
+@media (max-width: 1107px) {
+  .hb-cta-download__holder {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .hb-cta-download__holder {
+    padding-block: 20px;
+  }
+}
+html.hb-theme-dark .hb-cta-download__holder {
+  background-color: #161616;
 }
 .hb-cta-download__image {
   position: absolute;
   left: -164px;
   top: -147px;
 }
+@media (max-width: 1107px) {
+  .hb-cta-download__image {
+    display: none;
+  }
+}
 .hb-cta-download__text {
   margin-left: auto;
+  width: 100%;
+  max-width: 552px;
+  text-align: center;
+  margin-right: 150px;
+  color: var(--hb-color-light);
+}
+@media (max-width: 1250px) {
+  .hb-cta-download__text {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 1107px) {
+  .hb-cta-download__text {
+    margin-inline: auto;
+    padding-inline: 20px;
+    box-sizing: border-box;
+  }
+}
+html.hb-theme-dark .hb-cta-download__text {
+  color: #fff;
+}
+.hb-cta-download__heading {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 166%;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.hb-cta-download__description {
+  font-size: 14px;
+  line-height: 157%;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.hb-cta-download__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+}
+@media (max-width: 768px) {
+  .hb-cta-download__buttons {
+    gap: 10px;
+  }
 }
 /*# sourceMappingURL=all.css.map */
