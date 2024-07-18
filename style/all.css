@@ -3176,6 +3176,18 @@ html.hb-theme-dark .hb-cta-download__text {
   background-repeat: no-repeat;
   background-size: 20px 20px;
 }
+.hb-form-auth input.hb-input-email-bg-icon {
+  background-image: url(../img/email.svg);
+  background-position: top 14px left 24px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+}
+.hb-form-auth input.hb-input-tel-bg-icon {
+  background-image: url(../img/tel.svg);
+  background-position: top 14px left 24px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+}
 .hb-form-auth__label-text {
   color: #ADB3BE;
   font-size: 12px;
@@ -3201,6 +3213,15 @@ html.hb-theme-dark .hb-cta-download__text {
 }
 .hb-form-auth__login-reg {
   font-size: 13px;
+  font-weight: 500;
+}
+.hb-form-auth__guest-info {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 500;
+  line-height: 100%;
+}
+.hb-form-auth__guest-info-action {
+  font-size: 16px;
   font-weight: 500;
 }
 .hb-form-auth .hb-forgot-pass {
