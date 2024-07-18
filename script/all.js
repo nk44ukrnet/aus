@@ -219,6 +219,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     //verification test
     try {
+        //full code: https://codepen.io/RobertAron/pen/gOLLXLo
         const inputElements = [...document.querySelectorAll('input.code-input')]
 
         if (inputElements.length) {
