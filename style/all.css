@@ -3349,4 +3349,20 @@ html.hb-theme-dark .hb-cta-download__text {
 .hb-input-password-holder .hb-input-password-trigger svg {
   pointer-events: none;
 }
+.hb-splash-screen {
+  background: url(../img/splash-screen.png);
+  background-size: cover;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-bottom: 48px;
+}
+.hb-splash-screen__logo {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+}
 /*# sourceMappingURL=all.css.map */
