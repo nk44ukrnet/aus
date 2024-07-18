@@ -96,6 +96,15 @@
     margin-bottom: 28px;
   }
 
+  &__group-divided {
+    display: flex;
+    gap: 24px;
+
+    @media (max-width: @mobile) {
+      display: block;
+    }
+  }
+
   &__label {
     display: flex;
     flex-direction: column;
@@ -145,6 +154,13 @@
       background-repeat: no-repeat;
       background-size: 20px 20px;
     }
+
+    &.hb-input-delivery-bg-icon {
+      background-image: url(../img/box.svg);
+      background-position: top 14px left 24px;
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+    }
   }
 
   &__label-text {
@@ -167,6 +183,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding: 0;
 
     a {
       text-decoration: none;
@@ -196,6 +213,13 @@
     font-weight: 500;
   }
 
+  &__have-account {
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 123%;
+  }
+
   .hb-forgot-pass {
     text-align: center;
     display: table;
@@ -217,6 +241,70 @@
     border-radius: 40px;
     cursor: pointer;
   }
+
+  .hb-form-auth-gender {
+    margin-block: 30px;
+
+    h3 {
+      font-size: 13px;
+      color: #340700;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    &__item {
+      position: relative;
+
+      &:has(input:checked) {
+        &::after {
+          content: url('../img/tick-circle.svg');
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          display: block;
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+
+    &__holder {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    label {
+      cursor: pointer;
+      &:has(input:checked) {
+        svg {
+          border-color: var(--hb-color-1);
+
+          &:after {
+            content: 'sssss';
+          }
+        }
+      }
+    }
+
+    input {
+      display: none;
+    }
+
+    svg {
+      border-radius: 50%;
+      border: 2px solid #eee;
+    }
+
+    span {
+      display: block;
+      text-align: center;
+      margin-top: 8px;
+    }
+  }
+
 }
 
 .hb-input-invalid {
