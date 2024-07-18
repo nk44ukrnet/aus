@@ -14,7 +14,7 @@ gulp.task('minify-css', function() {
 
 // Minify JavaScript
 gulp.task('minify-js', function() {
-    return gulp.src(['script/vendor/swiper.js', 'script/funcs.js','script/all.js'])
+    return gulp.src(['script/vendor/swiper.js', 'script/vendor/imask.js','script/all.js'])
         .pipe(concat('all.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('script')); // Change destination directory to 'dist/js'

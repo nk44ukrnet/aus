@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Auth Forgot pass</title>
     <link rel="stylesheet" href="style/all.min.css">
-    <script src="script/all.min.js"></script>
+    <script src="script/all.min.js" defer></script>
 </head>
 <body>
 <div class="hb-wrapper">
@@ -17,34 +17,16 @@
 
                 <div class="hb-form-auth-wrapper">
                     <form class="hb-form-auth">
-                        <h2 class="hb-form-auth__heading">Continue as a guest</h2>
-                        <p class="hb-form-auth__description">We’ve made it easier to order! <br>
-                            Simply enter a few details
-                            and get ordering!</p>
-                        <div class="hb-form-auth__group">
-                            <label class="hb-form-auth__label">
-                                <span class="hb-form-auth__label-text">Name</span>
-                                <span class="hb-form-auth__input-wrapper">
-                                    <input type="text" value="Alexander Mogavero" name="guestName"
-                                           class=" hb-input-login-bg-icon">
-                                </span>
-                            </label>
-                        </div>
-                        <div class="hb-form-auth__group">
-                            <label class="hb-form-auth__label">
-                                <span class="hb-form-auth__label-text">Email</span>
-                                <span class="hb-form-auth__input-wrapper">
-                                    <input type="email" value="alexandermogavero@gmail.com" name="guestEmail"
-                                           class="hb-input-email-bg-icon">
-                                </span>
-                            </label>
-                        </div>
+                        <h2 class="hb-form-auth__heading">Forgot password</h2>
+                        <p class="hb-form-auth__description">lost your password? Don’t worry. We have your back. Just the number
+                            you registered with and you’ll be on your way to ordering  in no time!</p>
                         <div class="hb-form-auth__group">
                             <label class="hb-form-auth__label">
                                 <span class="hb-form-auth__label-text">Phone Number</span>
                                 <span class="hb-form-auth__input-wrapper">
-                                    <input type="tel" value="0570 801 002" name="guestPhone"
+                                    <input type="tel" value="+61 900 000 0000" placeholder="+61 900 000 0000" name="guestPhone" id="inputMaskExample1"
                                            class="hb-input-tel-bg-icon">
+                                    <img class="hb-country-icon" src="img/country-img.png" alt="country icon" loading="lazy" decoding="async">
                                 </span>
                             </label>
                         </div>
@@ -53,8 +35,7 @@
                             <button type="submit" class="hb-button-filled">Continue</button>
 
                             <ul class="hb-form-auth__login-options">
-                                <li><span class="hb-form-auth__guest-info">Receive 10% Coupon and exclusive birthday <br> rewards when you register for a b!te account</span></li>
-                                <li><a href="#!" class="hb-form-auth__guest-info-action hb-color-1">Click Here!</a></li>
+                                <li class="hb-form-auth__back-to-login">Go back to <a href="#!" class=" hb-color-1">Log In</a></li>
                             </ul>
                         </div>
                     </form>

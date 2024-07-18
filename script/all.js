@@ -202,4 +202,18 @@ window.addEventListener('DOMContentLoaded', function () {
         console.log(e);
     }
 
+    //input mask example 1
+    // try {
+    //     let mask = document.querySelector('#inputMaskExample1');
+    //     if(mask) {
+    //         IMask(
+    //             document.getElementById('inputMaskExample1'),
+    //             {
+    //                 mask: '+{61} 0000 000 0000'
+    //             }
+    //         )
+    //     }
+    // } catch (e) {
+    //     console.log(e)
+    // }
 })
