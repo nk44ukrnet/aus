@@ -18,10 +18,14 @@
 
   &__side {
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     &_content {
       flex: 0 1 720px;
       background-color: #fff;
-      height: 100vh;
+      min-height: 100vh;
 
       @media (min-width: 806px) {
         border-radius: 0 25px 25px 0;
@@ -34,3 +38,188 @@
     }
   }
 }
+
+.hb-form-auth-wrapper {
+  width: 100%;
+  max-width: 520px;
+
+
+  .hb-app-version {
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 14px;
+    line-height: 142%;
+    margin-top: 50px;
+
+    @media (max-width: @mobile) {
+      padding-left: 20px;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.hb-form-auth {
+  width: 100%;
+  max-width: 480px;
+  margin-left: auto;
+  padding-top: 50px;
+  padding-inline: 20px;
+  box-sizing: border-box;
+
+  &__heading {
+    color: #340700;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 125%;
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  &__description {
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+
+  &__group {
+    margin-bottom: 28px;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  input {
+    width: 100%;
+    display: block;
+    padding: 16px 20px 16px 60px;
+    box-sizing: border-box;
+    color: #000;
+    font-size: 14px;
+    line-height: 100%;
+    border: 1px solid transparent;
+    border-radius: 24px;
+    background-color: #F5F7FB;
+
+    &.hb-input-invalid-element {
+      border-color: var(--hb-color-3);
+    }
+
+    &.hb-input-login-bg-icon {
+      background-image: url(../img/user.svg);
+      background-position: top 14px left 24px;
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+    }
+
+    &.hb-input-password-bg-icon {
+      background-image: url(../img/lock.svg);
+      background-position: top 14px left 24px;
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+    }
+  }
+
+  &__label-text {
+    color: #ADB3BE;
+    font-size: 12px;
+    line-height: 133%;
+  }
+
+  &__input-wrapper {
+  }
+
+  &__error {
+  }
+
+  &__login-options {
+    margin: 0;
+    margin-top: 24px;
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__login-guest {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 114%;
+    color: #000;
+  }
+
+  &__login-reg {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .hb-forgot-pass {
+    text-align: center;
+    display: table;
+    margin-inline: auto;
+    color: var(--hb-color-1);
+    text-decoration: none;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    border: transparent;
+    outline: none;
+    min-height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-weight: 600;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+}
+
+.hb-input-invalid {
+
+}
+
+.hb-input-invalid-element {
+}
+
+.hb-input-password-holder {
+  position: relative;
+
+  .hb-input-password-trigger {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    svg {
+      pointer-events: none;
+    }
+  }
+}
+
+.hb-input-password {
+}
+
+.hb-input-password-trigger {
+}
+
+.hb-color-1 {
+}
+
+
+.hb-button-filled {
+}
+
+

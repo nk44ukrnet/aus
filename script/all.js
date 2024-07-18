@@ -118,7 +118,7 @@ window.addEventListener('DOMContentLoaded', function () {
     //swiper categories
     try {
         let swCats = document.querySelectorAll('.swiperCategories');
-        if(swCats.length) {
+        if (swCats.length) {
             let swiper = new Swiper(".swiperCategories", {
                 pagination: {
                     el: ".swiper-pagination-custom",
@@ -134,4 +134,72 @@ window.addEventListener('DOMContentLoaded', function () {
     } catch (e) {
         console.log(e);
     }
+
+    //input pass switcher
+    /*try {
+        let inputTrigger = document.querySelector('.hb-input-password-holder');
+        // inputHolder = document.querySelectorAll('.hb-input-password-holder');
+        if (inputTrigger) {
+            // inputTrigger.forEach(trigger => {
+            inputTrigger.addEventListener('click', function (e) {
+                // e.stopPropagation();
+                let current = e.target;
+                let parentHolder = current.closest('.hb-input-password-holder');
+                if (parentHolder) {
+                    let inputPass = parentHolder.querySelector('input');
+                    if (inputPass) {
+                        let inputType = inputPass.getAttribute('type');
+                        if (inputType === 'password') {
+                            inputPass.setAttribute('type', 'text');
+                            return;
+                        } else if (inputType === 'text') {
+                            inputPass.setAttribute('type', 'password');
+                            return;
+                        }
+                    }
+                }
+            })
+            // })
+        }
+    } catch (e) {
+        console.log(e);
+    }*/
+    try {
+        let inputTrigger = document.querySelector('.hb-input-password-trigger');
+
+        if (inputTrigger) {
+            inputTrigger.addEventListener('click', function (e) {
+
+                let current = e.target;
+                let parentHolder = current.closest('.hb-input-password-holder');
+
+                if (parentHolder) {
+                    let inputPass = parentHolder.querySelector('input');
+
+                    if (inputPass) {
+                        // Save the current selection range (cursor position)
+                        let start = inputPass.selectionStart;
+                        let end = inputPass.selectionEnd;
+
+                        // Get the current type of the input element
+                        let inputType = inputPass.getAttribute('type');
+
+                        // Toggle the input type between 'password' and 'text'
+                        if (inputType === 'password') {
+                            inputPass.setAttribute('type', 'text');
+                        } else if (inputType === 'text') {
+                            inputPass.setAttribute('type', 'password');
+                        }
+                        inputPass.focus();
+                        // Restore the cursor position
+                        inputPass.setSelectionRange(start, end);
+                        inputPass.focus(); // Ensure the input is focused
+                    }
+                }
+            }, false);
+        }
+    } catch (e) {
+        console.log(e);
+    }
+
 })
