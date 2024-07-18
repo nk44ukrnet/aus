@@ -1459,17 +1459,36 @@ html.hb-theme-dark .hb-header-menu-items a {
   color: rgba(255, 255, 255, 0.6);
   opacity: 1;
 }
+html.hb-theme-dark .hb-footer {
+  background-color: unset;
+}
 .hb-footer {
   background-color: #F9FBFC;
   margin-top: 123px;
 }
+@media (max-width: 768px) {
+  .hb-footer {
+    margin-top: 50px;
+  }
+}
 .hb-footer__content {
   padding-block: 44px;
+}
+@media (max-width: 768px) {
+  .hb-footer__content {
+    padding-block: 25px;
+  }
 }
 @media (min-width: 768px) {
   .hb-footer__inner {
     border-right: 1px solid rgba(0, 0, 0, 0.3);
     border-left: 1px solid rgba(0, 0, 0, 0.3);
+  }
+}
+@media (min-width: 768px) {
+  html.hb-theme-dark .hb-footer__inner {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
   }
 }
 .hb-footer__holder {
@@ -1483,6 +1502,11 @@ html.hb-theme-dark .hb-header-menu-items a {
   .hb-footer__holder {
     padding-inline: 20px;
   }
+}
+.hb-footer__logo {
+  width: 100%;
+  max-width: 228px;
+  height: auto;
 }
 .hb-footer__nav {
   margin-top: 52px;
@@ -1544,6 +1568,9 @@ html.hb-theme-dark .hb-header-menu-items a {
   font-size: 14px;
   line-height: 157%;
   margin: 0;
+}
+html.hb-theme-dark .hb-footer__info {
+  color: rgba(255, 255, 255, 0.4);
 }
 html.hb-theme-dark .hb-hero {
   background: linear-gradient(180deg, #000 1.2%, rgba(0, 0, 0, 0.2) 98.91%), url(../img/hero-bg-dark.png) lightgray 50% / cover no-repeat;

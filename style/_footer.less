@@ -1,18 +1,37 @@
+html.hb-theme-dark .hb-footer {
+  background-color: unset;
+}
+
 .hb-footer {
   background-color: #F9FBFC;
   margin-top: 123px;
+
+  @media (max-width: @mobile) {
+    margin-top: 50px;
+  }
 
   &__container {
   }
 
   &__content {
     padding-block: 44px;
+
+    @media (max-width: @mobile) {
+      padding-block: 25px;
+    }
   }
 
   &__inner {
     @media (min-width: @mobile) {
       border-right: 1px solid rgba(#000, 0.3);
       border-left: 1px solid rgba(#000, 0.3);
+    }
+  }
+
+  html.hb-theme-dark &__inner {
+    @media (min-width: @mobile) {
+      border-right: 1px solid rgba(#fff, 0.3);
+      border-left: 1px solid rgba(#fff, 0.3);
     }
   }
 
@@ -30,6 +49,9 @@
   }
 
   &__logo {
+    width: 100%;
+    max-width: 228px;
+    height: auto;
   }
 
   &__nav {
@@ -82,7 +104,7 @@
     margin-bottom: 36px;
 
     @media (max-width: @mobile) {
-    gap: 10px;
+      gap: 10px;
     }
 
     img {
@@ -98,6 +120,10 @@
     font-size: 14px;
     line-height: 157%;
     margin: 0;
+  }
+
+  html.hb-theme-dark &__info {
+    color: rgba(#fff, 0.4);
   }
 
 }
